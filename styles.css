@@ -43,94 +43,83 @@
 .cursor.typing {
     animation: none;
 }
-/* ========================
-   DARK MODE GLOBAL STYLES
-========================== */
 
-/* 1. Background & Text */
-body.dark-mode {
-  background-color: #121212;
-  color: #ffffff;
-}
+/* Dark Mode Styles */
 
-body.dark-mode section,
-body.dark-mode .navbar,
-body.dark-mode .footer,
-body.dark-mode .project-card,
-body.dark-mode .about-content,
-body.dark-mode .skills-container,
-body.dark-mode .contact-content,
-body.dark-mode .hero-content,
-body.dark-mode .mobile-menu,
-body.dark-mode .detail-item,
-body.dark-mode .skill-category,
-body.dark-mode .footer-content,
-body.dark-mode .newsletter,
-body.dark-mode .newsletter input,
-body.dark-mode .testimonial-card {
-  background-color: #1a1a1a !important;
-  color: #ffffff !important;
-  border: 1px solid #333;
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-/* 2. Text inside all sections */
-body.dark-mode h1,
-body.dark-mode h2,
-body.dark-mode h3,
-body.dark-mode h4,
-body.dark-mode h5,
-body.dark-mode h6,
-body.dark-mode p,
-body.dark-mode a,
-body.dark-mode span,
-body.dark-mode li,
-body.dark-mode label {
-  color: #ffffff !important;
+.toggle-label {
+  width: 60px;
+  height: 30px;
+  background-color: #fde88d; /* Light background */
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
-body.dark-mode .project-tech span {
-  background-color: #333333;
-  color: #ffffff;
+
+.toggle-label .toggle-ball {
+  width: 24px;
+  height: 24px;
+  background-color: #1c3555; /* Dark navy moon bg */
+  border-radius: 50%;
+  position: absolute;
+  left: 4px;
+  top: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
 }
-/* 3. Buttons */
-body.dark-mode .btn-primary {
-  background-color: #333;
+
+.icon-sun,
+.icon-moon {
+  font-size: 14px;
   color: #fff;
-  border: 1px solid #555;
+  position: absolute;
+  transition: opacity 0.3s ease;
 }
 
-body.dark-mode .btn-secondary {
-  background-color: #444;
-  color: #fff;
-  border: 1px solid #666;
+.icon-sun {
+  left: 8px;
+  opacity: 0;
 }
 
-body.dark-mode .btn-primary:hover,
-body.dark-mode .btn-secondary:hover {
-  background-color: #555;
+.icon-moon {
+  right: 8px;
+  opacity: 1;
 }
 
-/* 4. Navbar Link Colors */
-body.dark-mode .nav-links a,
-body.dark-mode .mobile-menu a {
-  color: #ffffff;
+#toggle-checkbox {
+  display: none;
 }
 
-/* 5. Form Elements */
-body.dark-mode input,
-body.dark-mode textarea {
-  background-color: #222;
-  color: #fff;
-  border: 1px solid #444;
+#toggle-checkbox:checked + .toggle-label {
+  background-color: #1c3555;
 }
 
-/* 6. Progress Bar */
-body.dark-mode .progress-bar {
-  background-color: #333;
+#toggle-checkbox:checked + .toggle-label .toggle-ball {
+  transform: translateX(30px);
+  background-color: #f9c51c; /* Yellow sun bg */
 }
 
-body.dark-mode .progress {
-  background-color: #00bcd4;
+#toggle-checkbox:checked + .toggle-label .icon-sun {
+  opacity: 1;
 }
+
+#toggle-checkbox:checked + .toggle-label .icon-moon {
+  opacity: 0;
+}
+
+/* DARK MODE SETTING END  */
+
 
 @keyframes blink {
     0% { opacity: 1; }
@@ -1010,6 +999,68 @@ section {
 .back-to-top:hover {
     background-color: var(--primary-dark);
     transform: translateY(-5px);
+}
+
+/* Dark Theme Styles */
+body.dark-theme {
+  background: #18191a;
+  color: #f1f1f1;
+}
+
+body.dark-theme .navbar,
+body.dark-theme .mobile-menu,
+body.dark-theme .footer,
+body.dark-theme .section-header,
+body.dark-theme .project-card,
+body.dark-theme .about-content,
+body.dark-theme .skills-container {
+  background: #23272f !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-theme a,
+body.dark-theme .btn,
+body.dark-theme .logo {
+  color: #f1f1f1 !important;
+}
+
+body.dark-theme .btn-primary {
+  background: #333 !important;
+  border-color: #444 !important;
+}
+
+body.dark-theme .btn-secondary {
+  background: #444 !important;
+  border-color: #555 !important;
+}
+
+body.dark-theme .progress-bar {
+  background: #333 !important;
+}
+
+body.dark-theme .progress {
+  background: #4e9cff !important;
+}
+
+/* Dark Theme Card Styles */
+body.dark-theme .project-card,
+body.dark-theme .about-content,
+body.dark-theme .skills-container,
+body.dark-theme .footer,
+body.dark-theme .section-header {
+  background: #111 !important;
+  color: #fff !important;
+}
+
+body.dark-theme .project-card a,
+body.dark-theme .about-content a,
+body.dark-theme .skills-container a {
+  color: #fff !important;
+}
+
+body.dark-theme .skill-category {
+  background: #111 !important;
+  color: #fff !important;
 }
 
 /* Responsive Styles */
