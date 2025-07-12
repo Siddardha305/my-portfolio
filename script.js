@@ -134,3 +134,28 @@ document.addEventListener('DOMContentLoaded', function() {
     showTestimonial(0);
     
 });
+// Dark/Light Mode Toggle Script
+const toggle = document.getElementById('toggle-theme');
+const body = document.body;
+
+// Load theme from localStorage
+if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    body.classList.remove("light-mode");
+    toggle.checked = true;
+} else {
+    body.classList.add("light-mode");
+}
+
+// Toggle on change
+toggle.addEventListener("change", () => {
+    if (toggle.checked) {
+        body.classList.add("dark-mode");
+        body.classList.remove("light-mode");
+        localStorage.setItem("theme", "dark");
+    } else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        localStorage.setItem("theme", "light");
+    }
+});

@@ -11,7 +11,7 @@
     --black: #000000;
     --transition: all 0.3s ease;
 }
-
+ 
 * {
     margin: 0;
     padding: 0;
@@ -42,6 +42,94 @@
 
 .cursor.typing {
     animation: none;
+}
+/* ========================
+   DARK MODE GLOBAL STYLES
+========================== */
+
+/* 1. Background & Text */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode section,
+body.dark-mode .navbar,
+body.dark-mode .footer,
+body.dark-mode .project-card,
+body.dark-mode .about-content,
+body.dark-mode .skills-container,
+body.dark-mode .contact-content,
+body.dark-mode .hero-content,
+body.dark-mode .mobile-menu,
+body.dark-mode .detail-item,
+body.dark-mode .skill-category,
+body.dark-mode .footer-content,
+body.dark-mode .newsletter,
+body.dark-mode .newsletter input,
+body.dark-mode .testimonial-card {
+  background-color: #1a1a1a !important;
+  color: #ffffff !important;
+  border: 1px solid #333;
+}
+
+/* 2. Text inside all sections */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6,
+body.dark-mode p,
+body.dark-mode a,
+body.dark-mode span,
+body.dark-mode li,
+body.dark-mode label {
+  color: #ffffff !important;
+}
+body.dark-mode .project-tech span {
+  background-color: #333333;
+  color: #ffffff;
+}
+/* 3. Buttons */
+body.dark-mode .btn-primary {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #555;
+}
+
+body.dark-mode .btn-secondary {
+  background-color: #444;
+  color: #fff;
+  border: 1px solid #666;
+}
+
+body.dark-mode .btn-primary:hover,
+body.dark-mode .btn-secondary:hover {
+  background-color: #555;
+}
+
+/* 4. Navbar Link Colors */
+body.dark-mode .nav-links a,
+body.dark-mode .mobile-menu a {
+  color: #ffffff;
+}
+
+/* 5. Form Elements */
+body.dark-mode input,
+body.dark-mode textarea {
+  background-color: #222;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+/* 6. Progress Bar */
+body.dark-mode .progress-bar {
+  background-color: #333;
+}
+
+body.dark-mode .progress {
+  background-color: #00bcd4;
 }
 
 @keyframes blink {
@@ -254,7 +342,7 @@ section {
 /* Hero Section */
 .hero {
     padding: 150px 0 100px;
-    background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%);
+    /* background: linear-gradient(135deg, #f5f7fa 0%, #e4e8f0 100%); */
 }
 
 .hero .container {
