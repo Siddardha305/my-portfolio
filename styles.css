@@ -795,23 +795,6 @@ section {
     margin-top: 30px;
 }
 
-.social-links a {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: var(--light-color);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gray-color);
-    transition: var(--transition);
-}
-
-.social-links a:hover {
-    background-color: var(--primary-color);
-    color: var(--white);
-    transform: translateY(-3px);
-}
 
 .contact-form {
     flex: 1;
