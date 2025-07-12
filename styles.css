@@ -63,6 +63,7 @@
   position: relative;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  
 }
 
 .toggle-label .toggle-ball {
@@ -120,7 +121,13 @@
 
 /* DARK MODE SETTING END  */
 
-
+@media (max-width: 768px) {
+  .mobile-menu .theme-toggle {
+    justify-content: flex-start;
+    margin-left: 0;
+    margin-right: auto;
+  }
+}
 @keyframes blink {
     0% { opacity: 1; }
     50% { opacity: 0; }
