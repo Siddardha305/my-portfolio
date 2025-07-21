@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HRM Project Showcase | Modern Dashboard UI</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #4361ee;
+            --secondary: #3f37c9;
+            --accent: #4895ef;
+            --light: #f8f9ff;
+            --dark: #212529;
+            --gray: #6c757d;
+            --success: #4cc9f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            margin: 1.5rem auto 0;
+            border-radius: 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .subtitle {
+            color: var(--gray);
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            background: white;
+        }
+
+        /* < !-- Button styling --> */
+        .btn-view {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 0.85rem;
+            transition: background 0.3s ease;
+        }
+
+        .btn-view:hover {
+            background-color: var(--secondary);
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid #eee;
+        }
+
+        .gallery-caption {
+            padding: 1.2rem;
+            text-align: center;
+        }
+
+        .gallery-caption h3 {
+            margin: 0 0 0.5rem;
+            color: var(--dark);
+            font-size: 1.1rem;
+        }
+
+        .gallery-caption p {
+            margin: 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--primary);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 4rem;
+            padding: 2rem 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<!-- Same <head> as before -->
+<!-- Only showing changes in <body> section for brevity -->
+
+<body>
+    <div class="container">
+        <header>
+            <h1>HR Management Dashboard</h1>
+            <p class="subtitle">A modern, user-friendly interface designed to streamline human resources operations and
+                employee management.</p>
+        </header>
+
+        <div class="gallery">
+            <div class="gallery-item">
+                <span class="badge">Dashboard</span>
+                <img src="images/hrm1.png" alt="HRM Dashboard Overview" />
+                <div class="gallery-caption">
+                    <h3>Dashboard Overview</h3>
+                    <p>Key metrics and quick actions</p>
+                    <a href="images/hrm1.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Employees</span>
+                <img src="images/hrm2.png" alt="Employee Management" />
+                <div class="gallery-caption">
+                    <h3>Employee Directory</h3>
+                    <p>Comprehensive staff management</p>
+                    <a href="images/hrm2.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Analytics</span>
+                <img src="images/hrm3.png" alt="HR Analytics" />
+                <div class="gallery-caption">
+                    <h3>Workforce Analytics</h3>
+                    <p>Data-driven insights</p>
+                    <a href="images/hrm3.png"target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Attendance</span>
+                <img src="images/hrm4.png" alt="Attendance Tracking" />
+                <div class="gallery-caption">
+                    <h3>Attendance System</h3>
+                    <p>Real-time tracking</p>
+                    <a href="images/hrm4.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Payroll</span>
+                <img src="images/hrm5.png" alt="Payroll Management" />
+                <div class="gallery-caption">
+                    <h3>Payroll Processing</h3>
+                    <p>Automated calculations</p>
+                    <a href="images/hrm5.png"target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Recruitment</span>
+                <img src="images/hrm6.png" alt="Recruitment Module" />
+                <div class="gallery-caption">
+                    <h3>Talent Acquisition</h3>
+                    <p>Applicant tracking system</p>
+                    <a href="images/hrm6.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Performance</span>
+                <img src="images/hrm7.png" alt="Performance Reviews" />
+                <div class="gallery-caption">
+                    <h3>Performance Management</h3>
+                    <p>360° feedback system</p>
+                    <a href="images/hrm7.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+
+            <div class="gallery-item">
+                <span class="badge">Settings</span>
+                <img src="images/hrm8.png" alt="System Configuration" />
+                <div class="gallery-caption">
+                    <h3>System Configuration</h3>
+                    <p>Customize your HRM</p>
+                    <a href="images/hrm8.png" target="_blank" class="btn btn-view">View Image</a>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>© 2023 HR Management System | Designed with <i class="fas fa-heart" style="color: #e63946;"></i> for
+                modern workplaces</p>
+        </footer>
+    </div>
+
+
+</body>
+
+</html>
